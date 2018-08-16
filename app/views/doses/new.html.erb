@@ -1,0 +1,12 @@
+<h1>Add a dose</h1>
+
+<%= form_for @dose do |f| %>
+  <%= f.label :description, "Enter a dose"%>
+  <%= f.text_field :description %>
+
+  <%= f.label :ingredient, "Enter a category" %>
+  <%= f.select :ingredient, [Ingredient.all]%>
+
+  <%= f.submit "Add" %>
+
+<% end %>
